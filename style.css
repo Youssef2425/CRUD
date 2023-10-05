@@ -1,0 +1,189 @@
+/* Start Global Rulse */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+body {
+  background-color: #1f2223;
+  color: lightgray;
+}
+.crud {
+  width: 80%;
+  margin: 0 auto;
+}
+/* End Global Rulse */
+
+/* Start Header */
+.crud header {
+  text-align: center;
+  padding: 15px 0;
+}
+.crud header h1 {
+  font-size: 35px;
+}
+.crud header p {
+  font-size: 20px;
+  margin: 2px 0;
+}
+/* End Header */
+
+/* Start Inputs */
+.inputs .form {
+  background-color: #181a1b;
+  margin-bottom: 35px;
+  padding: 0 10px;
+}
+.inputs .form input::placeholder {
+  color: lightgray;
+}
+.inputs .form :is(input, button)  {
+  height: 45px;
+  font-size: 20px;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #111;
+  border: 1px solid #494949;
+  border-radius: 10px;
+  color: lightgray;
+  outline: none;
+}
+.inputs .form .titleBox {
+  display: flex;
+  justify-content: space-between;
+}
+.inputs .form .titleBox input {
+  flex: 1;
+  max-width: 49%;
+}
+.inputs .form .prices {
+  display: flex;
+  gap: 0 1%;
+}
+.inputs .form .prices input {
+  flex: 1;
+  max-width: 24%;
+}
+.inputs .form #total {
+  display: block;
+  width: fit-content;
+  margin: 1px auto;
+  padding: 5px 8px;
+  color: white;
+  font-weight: bold;
+  background-color: #dc3545;
+  border-radius: 5px;
+  letter-spacing: 1px;
+}
+.inputs .form #total::before {
+  content: "Total : ";
+}
+.inputs .form #count {
+  width: 100%;
+}
+.inputs .form button {
+  width: 100%;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 20px;
+  background-color: #0164b6ed;
+}
+.inputs .form button:hover {
+  background-color: #0079dced;
+  letter-spacing: 1.5px;
+}
+.inputs .form #search {
+  width: 100%;
+}
+.inputs .form .searchBox {
+  display: flex;
+  justify-content: space-between;
+}
+.inputs .form .searchBox button {
+  width: 40%;
+}
+
+.inputs .form #deleteAll #deleteData {
+  background-color: #a51b28;
+}
+.inputs .form #deleteAll #deleteData:hover {
+  background-color: #990c1a;
+}
+/* End Inputs */
+
+/* Start Outputs */
+.outputs table {
+  width: 100%;
+  text-align: center;
+  margin: 20px 0;
+  padding: 10px 0;
+  background-color: #181a1b;
+}
+.outputs table th {
+  text-transform: uppercase;
+}
+.outputs table :is(th, td) {
+  padding: 5px;
+  font-size: 19px;
+}
+.outputs table button {
+  border: none;
+  cursor: pointer;
+  color: white;
+  transition: 0.2s;
+  padding: 8px 20px;
+  font-size: 18px;
+  border-radius: 14px;
+}
+.outputs table #update {
+  background-color: #198754;
+}
+.outputs table #update:hover {
+  background-color: #157347;
+}
+.outputs table #delete {
+  background-color: #dc3545;
+}
+.outputs table #delete:hover {
+  background-color: #bb2d3b;
+}
+/* End Outputs */
+
+@media (max-width: 767px) {
+  .crud {
+    width: 100%;
+    padding: 0 10px;
+  }
+  .inputs .form :is(input, button) {
+    font-size: 18px;
+  }
+  .inputs .form .titleBox {
+    flex-direction: column;
+  }
+  .inputs .form .titleBox input {
+    width: 100%;
+    max-width: 100%;
+  }
+  .inputs .form .prices {
+    flex-wrap: wrap;
+  }
+  .inputs .form .prices input {
+    max-width: 49%;
+  }
+  .inputs .form .searchBox {
+    flex-wrap: wrap;
+  }
+  .inputs .form .searchBox button {
+    width: 100%;
+  }
+}
+@media (max-width: 992px) {
+  .outputs table {
+    display: inline-block;
+    overflow-x: auto;
+  }
+}
